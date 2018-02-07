@@ -104,37 +104,6 @@
 ![](/read_me_images/center_fab.jpg)
 
 
-## 加入工程 ##
-
-### Sdk 版本 ###
-`compileSdkVersion` >= 25
-
-### 导入本库 ###
-
-#### Gradle例子: ####
-
-步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
-```groovy
-allprojects {
-	repositories {
-		...
-		maven { url "https://jitpack.io" }
-		maven { url "https://maven.google.com" }
-	}
-}
-```
-
-步骤 2. 添加依赖
-```groovy
-compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
-compile "com.android.support:design:26.+"
-```
-
-#### 手动导入: ####
-
-下载文件 [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) 并复制到你的工程中。
-
-
 ## 开始使用 ##
 
 
@@ -207,14 +176,6 @@ bind.bnve.setupWithViewPager(bind.vp);
     }
 	```
 
-#### 其他 BottomNavigationViewEx 的用法 ####
-请参考demo。
-
-#### 其他 BottomNavigationView 的用法 ####
-其他用法和官方 `BottomNavigationView` 一样。
-详情[点击这里](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html)
-
-
 ## 混淆 ##
 
 如果你启用了 ProGuard，那你应该加上以下混淆代码:
@@ -225,39 +186,8 @@ bind.bnve.setupWithViewPager(bind.vp);
 -keep public class android.support.design.internal.BottomNavigationItemView { *; }
 ```
 
-
-## 来源 ##
-
-本库修改自安卓官方 `Support Library 25 design` 中的 `BottomNavigationView`。
-
-我在尝试使用官方的库时，发现缺少灵活性。比如官方并没有提供切换当前选中项的方法。所以我在此基础上包装了一层，对外公开了一些方法。
-
-你完全没有必要担心库的稳定性，因为我是使用反射对父类进行最小限度的修改。
-
 ## 致谢 ##
 
 感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
+感谢 [ittianyu](https://github.com/ittianyu)
 
-## 授权 ##
-
-	MIT License
-	
-	Copyright (c) 2017 ittianyu
-	
-	Permission is hereby granted, free of charge, to any person obtaining a copy
-	of this software and associated documentation files (the "Software"), to deal
-	in the Software without restriction, including without limitation the rights
-	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-	copies of the Software, and to permit persons to whom the Software is
-	furnished to do so, subject to the following conditions:
-	
-	The above copyright notice and this permission notice shall be included in all
-	copies or substantial portions of the Software.
-	
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-	SOFTWARE.
