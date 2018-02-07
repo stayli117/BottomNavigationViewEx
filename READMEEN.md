@@ -1,50 +1,49 @@
+## [中文版点我](/README_ZH.md) ##
+
 ## BottomNavigationViewEx ##
-一个增强BottomNavigationView的安卓库。
+An android lib for enhancing BottomNavigationView.
 
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 9+](https://img.shields.io/badge/API-9%2B-green.svg)
 
-## 关于我们 ##
-[![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
-
-
-## 功能 ##
-
-|methods|description
+感谢
+原项目: https://github.com/ittianyu/BottomNavigationViewEx.git
+ 
+|Method|Description
 |---|---|
-|enableAnimation|开启或关闭点击动画(文字放大效果和图片移动效果)。 默认为 true.
-|enableItemShiftingMode|开始或关闭子菜单位移模式。 如果为 true，除了当前选中项，其他项的文本将会隐藏。 当菜单数大于3时，默认为 true。
-|enableShiftingMode|开始或关闭导航条位移模式。如果为 true，选中项和其他项的宽度不一样。当菜单数大于3时，默认为 true。
-|getBottomNavigationItemView|获取位于 position 的私有成员变量 mButton。
-|getBottomNavigationItemViews|获取私有成员变量 mButtons。
-|getCurrentItem|获取当前选中项的索引。
-|getIconAt|获取位于 position 的图片。
-|getItemCount|获取子项个数。
-|getItemHeight|获取菜单高度。
-|getLargeLabelAt|获取位于 position 的大标签. 每个子项包含两个标签，一个大的，一个小的。
-|getSmallLabelAt|获取位于 position 的小标签. 每个子项包含两个标签，一个大的，一个小的。
-|getMenuItemPosition|获取子菜单的索引。如果找不到，返回 -1。
-|getOnNavigationItemSelectedListener|获取 OnNavigationItemSelectedListener。
-|setCurrentItem|设置当前选中项。
-|setIconMarginTop|设置 icon 的 MarginTop，用于调节图标垂直位置。
-|setIconSize|设置所有的子项图标大小。
-|setIconSizeAt|设置位于 position 的图标的大小。
-|setIconsMarginTop|设置所有 icon 的 MarginTop，用于调节图标垂直位置。
-|setIconTintList| 设置图片的渲染颜色列表(Selector)
-|setIconVisibility|设置图片可见性。
-|setItemBackground| 设置子项的背景。
-|setItemHeight|设置子项高度。
-|setLargeTextSize|设置所有子项的大标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
-|setSmallTextSize|设置所有子项的小标签文本大小。每个子项有两个标签，一个大的，一个小的。当子项未选中时，显示小标签；选中时，显示大标签。
-|setTextSize|设置所有子项的大和小标签文本大小。
-|setTextTintList|设置子项 TextView 的颜色。
-|setTextVisibility|设置文本可见性。
-|setTypeface|设置所有子项的 TextView 字体
-|setupWithViewPager|和 ViewPager 绑定，当 任何一个选中项改变时，都会自动改变另一项。
+|enableAnimation|Enable or disable click item animation(text scale and icon move animation in no item shifting mode). Default true.
+|enableItemShiftingMode|Enable the shifting mode for each item. It will has a shift animation for item if true. Otherwise the item text always be shown. Default true when item count > 3.
+|enableShiftingMode|Enable the shifting mode for navigation. It will has a shift animation if true. Otherwise all items are the same width. Default true when item count > 3.
+|getBottomNavigationItemView|Get private mButton in mMenuView at position
+|getBottomNavigationItemViews|Get private mButtons in mMenuView
+|getCurrentItem|Get the current checked item position.
+|getIconAt|Get icon at position.
+|getItemCount|Get item count.
+|getItemHeight|Get item height.
+|getLargeLabelAt|Get large label at position. Each item has tow label, one is large, another is small.
+|getSmallLabelAt|Get small label at position. Each item has tow label, one is large, another is small.
+|getMenuItemPosition|Get menu item position in menu. Return position if success, -1 otherwise.
+|getOnNavigationItemSelectedListener|Get OnNavigationItemSelectedListener.
+|setCurrentItem|Set the current checked item.
+|setIconMarginTop|set margin top for icon.
+|setIconSize|Set all item ImageView size.
+|setIconSizeAt|Set all item ImageView size which at position.
+|setIconsMarginTop|set margin top for all icons.
+|setIconTintList| Set item icon tint list.
+|setIconVisibility|Change the visibility of icon.
+|setItemBackground| Set background of item.
+|setItemHeight|Set menu item height.
+|setLargeTextSize|Set all item large TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
+|setSmallTextSize|Set all item small TextView size. Each item has tow label, one is large, another is small. Small one will be shown when item state is normal. Large one will be shown when item checked.
+|setTextSize|Set all item large and small TextView size.
+|setTextTintList|Set item TextView color.
+|setTextVisibility|Change the visibility of text.
+|setTypeface|set Typeface for all item TextView.
+|setupWithViewPager|This method will link the given ViewPager and this BottomNavigationViewEx together so that changes in one are automatically reflected in the other. This includes scroll state changes and clicks.
 
 
-## 例子 ##
+## Example ##
 
-**样式**
+**Style**
 
 ![](/read_me_images/normal.gif)
 
@@ -74,7 +73,7 @@
 
 ![](/read_me_images/no_animation_shifting_mode_item_shifting_mode_icon.gif)
 
-**注意：这个 style 在安卓 4.x 上有 bug**
+**Attention: Something wrong on Android 4.x**
 
 ![](/read_me_images/with_padding.jpg)
 
@@ -92,30 +91,30 @@
 
 ![](/read_me_images/unchecked_first_time.jpg)
 
-**和 ViewPager 一起使用**
+
+**With ViewPager**
 
 ![](/read_me_images/with_view_pager.gif)
 
-**带数字的小红圈**
+**Add ViewBadger**
 
 ![](/read_me_images/view_badger.gif)
 
-
-**中间悬浮按钮**
+**Center Floating Action Button**
 
 ![](/read_me_images/center_fab.jpg)
 
 
-## 加入工程 ##
+## Adding to project ##
 
-### Sdk 版本 ###
+### Sdk Version ###
 `compileSdkVersion` >= 25
 
-### 导入本库 ###
+### Importing to project ###
 
-#### Gradle例子: ####
+#### Example for Gradle: ####
 
-步骤 1. 在工程根目录的 `build.gradle` 最后添加如下代码:
+Step 1. Add it in your root build.gradle at the end of repositories:
 ```groovy
 allprojects {
 	repositories {
@@ -126,21 +125,21 @@ allprojects {
 }
 ```
 
-步骤 2. 添加依赖
+Step 2. Add the dependency
 ```groovy
 compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
 compile "com.android.support:design:26.+"
 ```
 
-#### 手动导入: ####
 
-下载文件 [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) 并复制到你的工程中。
+#### Manual: ####
 
-
-## 开始使用 ##
+Downloading [BottomNavigationViewEx.java](https://raw.githubusercontent.com/ittianyu/BottomNavigationViewEx/master/widget/src/main/java/com/ittianyu/bottomnavigationviewex/BottomNavigationViewEx.java) and copying it to you project.
 
 
-在 `xml` 布局中添加自定义控件:
+## Getting started ##
+
+Adding a custom widget in `xml` :
 ```xml
 <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
     android:id="@+id/bnve"
@@ -153,25 +152,25 @@ compile "com.android.support:design:26.+"
     app:menu="@menu/menu_navigation_with_view_pager" />
 ```
 
-在 `Activity` 中绑定控件:
+Binding view in `Activity`:
 ```java
 BottomNavigationViewEx bnve = (BottomNavigationViewEx) findViewById(R.id.bnve);
 ```
 
-#### 禁止所有动画效果 ####
+#### Disable all animations ####
 ```java
 bnve.enableAnimation(false);
 bnve.enableShiftingMode(false);
 bnve.enableItemShiftingMode(false);
 ```
 
-#### 自定义图标和文本大小 ####
+#### Custom text and icon size ####
 ```java
 bnve.setIconSize(widthDp, heightDp);
 bnve.setTextSize(sp);
 ```
 
-#### 和 ViewPager 绑定####
+#### Binding with ViewPager ####
 ```java
 // set adapter
 adapter = new VpAdapter(getSupportFragmentManager(), fragments);
@@ -181,14 +180,13 @@ bind.vp.setAdapter(adapter);
 bind.bnve.setupWithViewPager(bind.vp);
 ```
 
+#### Add badge view ####
 
-#### 添加带数字的小红点 ####
-
-1. Gradle 中加入 badge 库的依赖
+1. Add badge lib
 	```
 	compile 'q.rorbin:badgeview:1.1.0'
 	```
-2. 和底部控件绑定
+2. Bind bottom view
 	```
     // add badge
     addBadgeAt(2, 1);
@@ -209,17 +207,16 @@ bind.bnve.setupWithViewPager(bind.vp);
     }
 	```
 
-#### 其他 BottomNavigationViewEx 的用法 ####
-请参考demo。
+#### Other usage in BottomNavigationViewEx ####
+You can see the demo.
 
-#### 其他 BottomNavigationView 的用法 ####
-其他用法和官方 `BottomNavigationView` 一样。
-详情[点击这里](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html)
+#### Usage in BottomNavigationView ####
+Other usage is the same as official `BottomNavigationView`.
+You can [click here](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html) for detail.
 
+## ProGuard ##
 
-## 混淆 ##
-
-如果你启用了 ProGuard，那你应该加上以下混淆代码:
+If you are using ProGuard you might need to add the following option:
 ```
 -keep public class android.support.design.widget.BottomNavigationView { *; }
 -keep public class android.support.design.internal.BottomNavigationMenuView { *; }
@@ -227,20 +224,20 @@ bind.bnve.setupWithViewPager(bind.vp);
 -keep public class android.support.design.internal.BottomNavigationItemView { *; }
 ```
 
+## References ##
 
-## 来源 ##
+The lib is based on `BottomNavigationView` in `Support Library 25 design`.
 
-本库修改自安卓官方 `Support Library 25 design` 中的 `BottomNavigationView`。
+I found it was inflexible when I try in demo. For example, I can't change the current checked item by code. So I write a class extends it to provide some useful method.
 
-我在尝试使用官方的库时，发现缺少灵活性。比如官方并没有提供切换当前选中项的方法。所以我在此基础上包装了一层，对外公开了一些方法。
+You no need to worry about stability. Because I minimise modifying by reflecting.
 
-你完全没有必要担心库的稳定性，因为我是使用反射对父类进行最小限度的修改。
+## Thanks ##
 
-## 致谢 ##
+Thanks for [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
 
-感谢 [Adrián Mouly](https://github.com/amouly) | [liaolintao](https://github.com/liaolintao) | [Luong Vo](https://github.com/luongvo).
 
-## 授权 ##
+## License ##
 
 	MIT License
 	
@@ -263,3 +260,4 @@ bind.bnve.setupWithViewPager(bind.vp);
 	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 	SOFTWARE.
+
